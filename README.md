@@ -1,5 +1,7 @@
 # time-quote
 
+Host on Github pages: https://acollins1991.github.io/time-quote/
+
 ## Project setup
 ```
 npm install
