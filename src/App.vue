@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    Reset
+    <Form />
   </div>
 </template>
 
 <script>
+import Form from './components/Form.vue'
 
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Form
+  }
 }
 </script>
