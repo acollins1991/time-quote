@@ -11,23 +11,16 @@ describe('TimeInput.vue', () => {
     const daysInput = wrapper.find('input.tq-time-input--days')
     expect(daysInput.exists()).toBe(true)
   })
-  it('inputs convert inputs to total minutes and sets guess prop to total minutes', () => {
-    const wrapper = shallowMount(TimeInput, {
-      propsData: {
-        guess: 0
-      }
-    })
-
+  it('inputs convert inputs to total minutes', () => {
+    const wrapper = shallowMount(TimeInput)
     // check initial values
     expect(wrapper.vm.$data.minutesInputValue).toBe(0)
     expect(wrapper.vm.$data.hoursInputValue).toBe(0)
     expect(wrapper.vm.$data.daysInputValue).toBe(0)
-
     // collect inputs
     const minutesInput = wrapper.find('input.tq-time-input--minutes')
     const hoursInput = wrapper.find('input.tq-time-input--hours')
     const daysInput = wrapper.find('input.tq-time-input--days')
-
     // set change events and new values on inputs
     minutesInput.element.value = 5
     hoursInput.element.value = 1
@@ -38,11 +31,23 @@ describe('TimeInput.vue', () => {
     expect(wrapper.vm.$data.hoursInputValue)
     daysInput.trigger('input')
     expect(wrapper.vm.$data.daysInputValue)
- 
-    // expect accurate total minutes value after input changes and set guess prop to this: 5mins = 5, 1hr = 60, 1day = 1440, total = 1505
+    // expect accurate total minutes value after input changes: 5mins = 5, 1hr = 60, 1day = 1440, total = 1505
     setTimeout(() => {
       expect(wrapper.vm.totalMinutes).toBe(1505) 
-      expect(wrapper.vm.$props.guess).toBe(1505)
     }, 3000) 
+  })
+  it('emit total minutes with guess category', () => {
+    const wrapper = shallowMount(TimeInput, {
+      propsData: {
+        guess: 'bestGuess'
+      }
+    })
+    wrapper.find('input.tq-time-input--minutes').element.value = 5
+    wrapper.find('input.tq-time-input--minutes').trigger('input')
+    setTimeout(function(){
+      expect(wrapper.emitted().guessUpdated).toBeTruthy()
+      expect(wrapper.emitted().guessUpdated[1]).toEqual(['bestGuess']) 
+      expect(wrapper.emitted().guessUpdated[2]).toEqual([5]) 
+    }, 3000)
   })
 })
