@@ -6,4 +6,10 @@ describe('Form.vue', () => {
     const wrapper = shallowMount(Form)
     expect(wrapper.find('form').exists()).toBe(true)
   })
+  it('emits custom estimation event on submission', () => {
+    const wrapper = shallowMount(Form)
+    const submitButton = wrapper.find('input.tq-submit')
+    submitButton.trigger('click')
+    expect(wrapper.emitted().guessesSubmitted).toBeTruthy()
+  })
 })
