@@ -22,6 +22,11 @@ export default {
         totalMinutes: function(){
             return this.minutesInputValue + ( this.hoursInputValue*60 ) + ( ( 60*24 )*this.daysInputValue )
         }
+    },
+    watch: {
+        totalMinutes: function(value){
+            this.guess = value
+        }
     }
 }
 </script>
