@@ -11,15 +11,14 @@ describe('TimeInput.vue', () => {
     const daysInput = wrapper.find('input.tq-time-input--days')
     expect(daysInput.exists()).toBe(true)
   })
-  it('inputs convert total minutes to minutes, hours, days', () => {
+  it('inputs convert inputs to total minutes and sets guess prop to total minutes', () => {
     const wrapper = shallowMount(TimeInput, {
       propsData: {
-          guess: 0
+        guess: 0
       }
     })
 
     // check initial values
-    expect(wrapper.vm.$props.guess).toBe(0)
     expect(wrapper.vm.$data.minutesInputValue).toBe(0)
     expect(wrapper.vm.$data.hoursInputValue).toBe(0)
     expect(wrapper.vm.$data.daysInputValue).toBe(0)
@@ -40,9 +39,10 @@ describe('TimeInput.vue', () => {
     daysInput.trigger('input')
     expect(wrapper.vm.$data.daysInputValue)
  
-    // expect accurate total minutes value after input changes: 5mins = 5, 1hr = 60, 1day = 1440, total = 1505
+    // expect accurate total minutes value after input changes and set guess prop to this: 5mins = 5, 1hr = 60, 1day = 1440, total = 1505
     setTimeout(() => {
       expect(wrapper.vm.totalMinutes).toBe(1505) 
+      expect(wrapper.vm.$props.guess).toBe(1505)
     }, 3000) 
   })
 })
