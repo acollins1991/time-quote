@@ -33,8 +33,8 @@ describe('TimeInput.vue', () => {
     expect(wrapper.vm.$data.daysInputValue)
     // expect accurate total minutes value after input changes: 5mins = 5, 1hr = 60, 1day = 1440, total = 1505
     setTimeout(() => {
-      expect(wrapper.vm.totalMinutes).toBe(1505) 
-    }, 3000) 
+      expect(wrapper.vm.totalMinutes).toBe(1505)
+    }, 3000)
   })
   it('emit total minutes with guess category', () => {
     const wrapper = shallowMount(TimeInput, {
@@ -44,10 +44,9 @@ describe('TimeInput.vue', () => {
     })
     wrapper.find('input.tq-time-input--minutes').element.value = 5
     wrapper.find('input.tq-time-input--minutes').trigger('input')
-    setTimeout(function(){
-      expect(wrapper.emitted().guessUpdated).toBeTruthy()
-      expect(wrapper.emitted().guessUpdated[1]).toEqual(['bestGuess']) 
-      expect(wrapper.emitted().guessUpdated[2]).toEqual([5]) 
-    }, 3000)
+
+    expect(wrapper.emitted().guessUpdated).toBeTruthy()
+    expect(wrapper.emitted().guessUpdated[0][0]).toEqual("bestGuess")
+    expect(wrapper.emitted().guessUpdated[0][1]).toEqual(5)
   })
 })
