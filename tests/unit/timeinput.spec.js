@@ -46,7 +46,7 @@ describe('TimeInput.vue', () => {
     wrapper.find('input.tq-time-input--minutes').trigger('input')
 
     expect(wrapper.emitted().guessUpdated).toBeTruthy()
-    expect(wrapper.emitted().guessUpdated[0][0]).toEqual("bestGuess")
-    expect(wrapper.emitted().guessUpdated[0][1]).toEqual(5)
+    expect(wrapper.emitted().guessUpdated[0][0].name).toEqual("bestGuess")
+    expect(wrapper.emitted().guessUpdated[0][0].value).toEqual(5)
   })
 })

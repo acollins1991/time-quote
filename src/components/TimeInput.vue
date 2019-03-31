@@ -25,7 +25,7 @@ export default {
     },
     watch: {
         totalMinutes: function(value){
-            this.$emit('guessUpdated', this.guess, value)
+            this.$emit('guessUpdated', { 'name': this.guess, 'value': value })
         }
     }
 }
