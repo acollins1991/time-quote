@@ -48,9 +48,9 @@ export default {
     emitGuessesSubmitted: function(){
       const bestGuess = this.bestGuess
       const optimisticGuess = this.optimisticGuess
-      const pessitimisticGuess = this.pessitimisticGuess
+      const pessimisticGuess = this.pessimisticGuess
 
-      this.$emit('guessesSubmitted', { bestGuess, optimisticGuess, pessitimisticGuess })
+      this.$root.$emit('guessesSubmitted', { bestGuess, optimisticGuess, pessimisticGuess })
     }
   }
 }
