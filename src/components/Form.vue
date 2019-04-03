@@ -50,7 +50,7 @@ export default {
       const optimisticGuess = this.optimisticGuess
       const pessitimisticGuess = this.pessitimisticGuess
 
-      this.$emit('guessesSubmitted', { bestGuess, optimisticGuess, pessitimisticGuess })
+      this.$root.$emit('guessesSubmitted', { bestGuess, optimisticGuess, pessitimisticGuess })
     }
   }
 }
