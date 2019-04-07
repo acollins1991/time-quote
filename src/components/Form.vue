@@ -35,8 +35,6 @@ export default {
   },
   methods: {
     updateGuesses: function(eventPayload) {
-      console.log( eventPayload.name )
-      console.log( eventPayload.value )
       if( eventPayload.name === "optimisticGuess" ) {
         this.optimisticGuess = eventPayload.value
       } else if ( eventPayload.name === "bestGuess" ) {
