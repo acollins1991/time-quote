@@ -7,7 +7,7 @@ Deploy to gh pages by running 'git subtree push --prefix dist origin gh-pages' o
 ## Todo list
 
 - [x] Finish basic component functions and tests
-- [ ] Implement initial screenshot tests on each component
+- [x] Implement initial screenshot tests on each component
 - [ ] Improve UI
 - [ ] Optimise tests
 - [ ] 'Save quote' function 
