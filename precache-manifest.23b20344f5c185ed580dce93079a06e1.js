@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/time-quote/js/chunk-vendors.d8230445.js"
   },
   {
-    "revision": "dd90024dfcf794f30776",
-    "url": "/time-quote/js/app.ca77d688.js"
+    "revision": "dcf7fdd29ee3ea3a3be4",
+    "url": "/time-quote/js/app.0dc1f9cc.js"
   },
   {
-    "revision": "b711db6f719ac7ac7401c19fdfa0a73e",
+    "revision": "726349e618485e22bcba82a4f11a24e8",
     "url": "/time-quote/index.html"
   },
   {
-    "revision": "dd90024dfcf794f30776",
+    "revision": "dcf7fdd29ee3ea3a3be4",
     "url": "/time-quote/css/app.cc313ec8.css"
   }
 ];
