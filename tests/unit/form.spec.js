@@ -17,8 +17,6 @@ describe('Form.vue', () => {
 
     submitButton.trigger('click')
 
-    console.log(rootWrapper.emitted().guessesSubmitted[0][0])
-
     expect(rootWrapper.emitted().guessesSubmitted).toBeTruthy()
     expect(rootWrapper.emitted().guessesSubmitted[0][0].bestGuess).toEqual(5)
     expect(rootWrapper.emitted().guessesSubmitted[0][0].optimisticGuess).toEqual(5)
