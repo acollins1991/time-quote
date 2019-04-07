@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GuessCalculator.vue renders correctly 1`] = `
+<div
+  class="text-5xl mt-5"
+>
+  <span
+    class="minutes"
+  >
+    0m 
+  </span>
+   
+  <span
+    class="hours"
+  >
+    0h 
+  </span>
+   
+  <span
+    class="days"
+  >
+    0d 
+  </span>
+</div>
+`;

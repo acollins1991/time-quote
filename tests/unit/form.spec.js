@@ -2,9 +2,9 @@ import { shallowMount, createWrapper } from '@vue/test-utils'
 import Form from '@/components/Form.vue'
 
 describe('Form.vue', () => {
-  it('renders the form', () => {
+  it('renders correctly', () => {
     const wrapper = shallowMount(Form)
-    expect(wrapper.find('form').exists()).toBe(true)
+    expect(wrapper.element).toMatchSnapshot()
   })
   it('emits custom estimation event on submission from root', () => {
     const wrapper = shallowMount(Form)

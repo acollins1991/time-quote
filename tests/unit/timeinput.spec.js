@@ -2,14 +2,9 @@ import { shallowMount } from '@vue/test-utils'
 import TimeInput from '@/components/TimeInput.vue'
 
 describe('TimeInput.vue', () => {
-  it('displays inputs for minutes, hours, days', () => {
+  it('renders correctly', () => {
     const wrapper = shallowMount(TimeInput)
-    const minutesInput = wrapper.find('input.tq-time-input--minutes')
-    expect(minutesInput.exists()).toBe(true)
-    const hoursInput = wrapper.find('input.tq-time-input--hours')
-    expect(hoursInput.exists()).toBe(true)
-    const daysInput = wrapper.find('input.tq-time-input--days')
-    expect(daysInput.exists()).toBe(true)
+    expect(wrapper.element).toMatchSnapshot()
   })
   it('inputs convert inputs to total minutes', () => {
     const wrapper = shallowMount(TimeInput)
