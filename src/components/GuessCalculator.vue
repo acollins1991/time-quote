@@ -30,7 +30,7 @@ export default {
 
             // below 1 hour
             if( totalMinutes <= 59 ) {
-                this.minutes = totalMinutes
+                this.minutes = Math.round(totalMinutes)
             } 
             // at least 1 hour but less than 1 day
             else if( totalMinutes >= 60 && totalMinutes <= 1439 ) {
