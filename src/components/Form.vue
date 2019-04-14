@@ -7,7 +7,7 @@
     <TimeInput v-bind:guess="'bestGuess'" @guessUpdated="updateGuesses" />
     <span v-bind:class="inputHeadingClasses">Pessimistic:</span>
     <TimeInput v-bind:guess="'pessimisticGuess'" @guessUpdated="updateGuesses" />
-    <div class="px-3">
+    <div class="px-3 mt-2 mb-3">
       <input type="submit" class="tq-submit bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" value="Submit" v-on:click.prevent="emitGuessesSubmitted">
     </div>
   </form>
