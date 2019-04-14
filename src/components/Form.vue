@@ -7,7 +7,9 @@
     <TimeInput v-bind:guess="'bestGuess'" @guessUpdated="updateGuesses" />
     <span v-bind:class="inputHeadingClasses">Pessimistic:</span>
     <TimeInput v-bind:guess="'pessimisticGuess'" @guessUpdated="updateGuesses" />
-    <input type="submit" class="tq-submit bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" value="Submit" v-on:click.prevent="emitGuessesSubmitted">
+    <div class="px-3">
+      <input type="submit" class="tq-submit bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" value="Submit" v-on:click.prevent="emitGuessesSubmitted">
+    </div>
   </form>
 </div> 
 </template>
@@ -19,7 +21,7 @@ export default {
   name: "Form",
   data(){
     return {
-      inputHeadingClasses: 'block px-3 mt-4 mb-3 font-sans text-2xl',
+      inputHeadingClasses: 'block px-3 mt-2 mb-1 font-sans text-2xl', 
       optimisticGuess: 0,
       bestGuess: 0,
       pessimisticGuess: 0
