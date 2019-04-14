@@ -22,7 +22,7 @@ export default {
     data() {
         return {
             labelClasses: 'block uppercase tracking-wide text-grey-darker text-sm font-bold mb-2',
-            inputClasses: 'appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-1 px-2 mb-3 leading-tight focus:outline-none focus:bg-white',
+            inputClasses: 'appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey rounded py-1 px-2 mb-3 leading-tight focus:outline-none focus:bg-white',
             minutesInputValue: 0,
             hoursInputValue: 0,
             daysInputValue: 0
