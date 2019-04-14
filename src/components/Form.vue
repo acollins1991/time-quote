@@ -1,21 +1,15 @@
 <template>
 <div>
   <form>
-    Optimistic:
-    <br>
+    <span v-bind:class="inputHeadingClasses">Optimistic:</span>
     <TimeInput v-bind:guess="'optimisticGuess'" @guessUpdated="updateGuesses" />
-    <br>
-    Best Guess:
-    <br>
+    <span v-bind:class="inputHeadingClasses">Best Guess:</span>
     <TimeInput v-bind:guess="'bestGuess'" @guessUpdated="updateGuesses" />
-    <br>
-    Pessimistic:
-    <br>
+    <span v-bind:class="inputHeadingClasses">Pessimistic:</span>
     <TimeInput v-bind:guess="'pessimisticGuess'" @guessUpdated="updateGuesses" />
-    <br>
     <input type="submit" class="tq-submit bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" value="Submit" v-on:click.prevent="emitGuessesSubmitted">
   </form>
-</div>
+</div> 
 </template>
 
 <script>
@@ -25,6 +19,7 @@ export default {
   name: "Form",
   data(){
     return {
+      inputHeadingClasses: 'block px-3 mt-4 mb-3 font-sans text-2xl',
       optimisticGuess: 0,
       bestGuess: 0,
       pessimisticGuess: 0
