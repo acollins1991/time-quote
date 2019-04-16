@@ -3,42 +3,45 @@
 exports[`Form.vue renders correctly 1`] = `
 <div>
   <form>
-    
-    Optimistic:
-    
-    <br />
+    <span
+      class="block px-3 mt-2 mb-1 font-sans text-2xl"
+    >
+      Optimistic:
+    </span>
      
     <timeinput-stub
       guess="optimisticGuess"
     />
      
-    <br />
-    
-    Best Guess:
-    
-    <br />
+    <span
+      class="block px-3 mt-2 mb-1 font-sans text-2xl"
+    >
+      Best Guess:
+    </span>
      
     <timeinput-stub
       guess="bestGuess"
     />
      
-    <br />
-    
-    Pessimistic:
-    
-    <br />
+    <span
+      class="block px-3 mt-2 mb-1 font-sans text-2xl"
+    >
+      Pessimistic:
+    </span>
      
     <timeinput-stub
       guess="pessimisticGuess"
     />
      
-    <br />
-     
-    <input
-      class="tq-submit bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
-      type="submit"
-      value="Submit"
-    />
+    <div
+      class="px-3 mt-2 mb-3"
+    >
+      <input
+        class="tq-submit bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
+        type="submit"
+        value="Submit"
+      />
+    </div>
   </form>
 </div>
 `;

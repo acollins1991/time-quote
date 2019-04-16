@@ -1,8 +1,8 @@
 <template>
     <div class="text-5xl mt-5">
-        <span class="minutes">{{ minutes }}m </span>
-        <span class="hours">{{ hours }}h </span>
         <span class="days">{{ days }}d </span>
+        <span class="hours">{{ hours }}h </span>
+        <span class="minutes">{{ minutes }}m </span>
     </div>
 </template>
 

@@ -5,9 +5,9 @@ exports[`GuessCalculator.vue renders correctly 1`] = `
   class="text-5xl mt-5"
 >
   <span
-    class="minutes"
+    class="days"
   >
-    0m 
+    0d 
   </span>
    
   <span
@@ -17,9 +17,9 @@ exports[`GuessCalculator.vue renders correctly 1`] = `
   </span>
    
   <span
-    class="days"
+    class="minutes"
   >
-    0d 
+    0m 
   </span>
 </div>
 `;

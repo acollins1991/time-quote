@@ -9,18 +9,18 @@ exports[`TimeInput.vue renders correctly 1`] = `
   >
     <label
       class="block uppercase tracking-wide text-grey-darker text-sm font-bold mb-2"
-      for="{$guess}-minutes-input"
+      for="undefined-days-input"
     >
-      Minutes
+      Days
     </label>
      
     <input
-      class="tq-time-input tq-time-input--minutes appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-      id="{$guess}-minutes-input"
-      max="60"
+      class="tq-time-input tq-time-input--days appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey rounded py-1 px-2 mb-3 leading-tight focus:outline-none focus:bg-white"
+      id="undefined-days-input"
+      max="30"
       min="0"
-      name="minutes"
-      step="5"
+      name="days"
+      step="1"
       type="number"
     />
   </div>
@@ -30,14 +30,14 @@ exports[`TimeInput.vue renders correctly 1`] = `
   >
     <label
       class="block uppercase tracking-wide text-grey-darker text-sm font-bold mb-2"
-      for="{$guess}-hours-input"
+      for="undefined-hours-input"
     >
       Hours
     </label>
      
     <input
-      class="tq-time-input tq-time-input--hours appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-      id="{$guess}-hours-input"
+      class="tq-time-input tq-time-input--hours appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey rounded py-1 px-2 mb-3 leading-tight focus:outline-none focus:bg-white"
+      id="undefined-hours-input"
       max="25"
       min="0"
       name="hours"
@@ -51,18 +51,18 @@ exports[`TimeInput.vue renders correctly 1`] = `
   >
     <label
       class="block uppercase tracking-wide text-grey-darker text-sm font-bold mb-2"
-      for="{$guess}-days-input"
+      for="undefined-minutes-input"
     >
-      Days
+      Minutes
     </label>
      
     <input
-      class="tq-time-input tq-time-input--days appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-      id="{$guess}-days-input"
-      max="30"
+      class="tq-time-input tq-time-input--minutes appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey rounded py-1 px-2 mb-3 leading-tight focus:outline-none focus:bg-white"
+      id="undefined-minutes-input"
+      max="60"
       min="0"
-      name="days"
-      step="1"
+      name="minutes"
+      step="5"
       type="number"
     />
   </div>
