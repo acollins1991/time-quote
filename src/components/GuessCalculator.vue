@@ -34,22 +34,22 @@ export default {
             } 
             // at least 1 hour but less than 1 day
             else if( totalMinutes >= 60 && totalMinutes <= 1439 ) {
-                var hours = totalMinutes / 60
-                var rhours = Math.floor(hours)
-                var minutes = (hours - rhours) * 60
-                var rminutes = Math.round(minutes)
+                let hours = totalMinutes / 60
+                let rhours = Math.floor(hours)
+                let minutes = (hours - rhours) * 60
+                let rminutes = Math.round(minutes)
 
                 this.minutes = rminutes 
                 this.hours = rhours
             }
             // at 1 day
             else if( totalMinutes >= 1440 ) {
-                var days = ( totalMinutes / 60 ) / 24
-                var rdays = Math.floor(days)
-                var hours = (days - rdays) * 24
-                var rhours = Math.floor(hours)
-                var minutes = (hours - rhours) * 60
-                var rminutes = Math.round(minutes)
+                let days = ( totalMinutes / 60 ) / 24
+                let rdays = Math.floor(days)
+                let hours = (days - rdays) * 24
+                let rhours = Math.floor(hours)
+                let minutes = (hours - rhours) * 60
+                let rminutes = Math.round(minutes)
 
                 this.minutes = rminutes 
                 this.hours = rhours
