@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/time-quote/precache-manifest.23b20344f5c185ed580dce93079a06e1.js"
+  "/time-quote/precache-manifest.572f8143b9d0e8d96dc22a9e6a977bc4.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "time-quote"});
